@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>RunAsset.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Applications</Title>
+    <Authors>Patrik Nyarfadi</Authors>
+    <PackageIcon>IMG_20221017_001005_494.jpg</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="197873.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="IMG_20221017_001005_494.ico" />
+    <Content Include="RunAsset.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\New folder\IMG_20221017_001005_494.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="197873.jpg" />
+  </ItemGroup>
+
+</Project>
