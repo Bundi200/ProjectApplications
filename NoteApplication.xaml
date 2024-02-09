@@ -42,10 +42,10 @@
             <TabControl x:Name="tabcontrol" Grid.Column="0" Background="White" SelectionChanged="tabcontrol_SelectionChanged">
                 <TabItem Header="Test1"></TabItem>
                 <TabItem Header="Test2"></TabItem>
-
+                <TabControl></TabControl>
             </TabControl>
 
-            <Button x:Name="btn_NewTab" Content="+" Grid.Column="1"></Button>
+            
 
         </Grid>
 

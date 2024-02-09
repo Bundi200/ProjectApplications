@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:Applications"
         xmlns:system="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="700" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="900" Width="800" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
 
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
 
@@ -29,8 +30,8 @@
 
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
+        <Label Grid.Column="1" Grid.Row="0" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
+        <Label Grid.Column="1" Grid.Row="1" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
             <Label.RenderTransform>
                 <ScaleTransform   ScaleX="-1"/>
 
@@ -40,11 +41,11 @@
             
 
         </Label>
-        <Label Grid.Row="1" Grid.Column="1" x:Name="lbl_Time" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" Content = "{Binding CurrentDateAndTime}" ContentStringFormat=" {0:T}" />
-        <Label Grid.Column="1" Grid.Row="0" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center"  Content="{Binding Source={x:Static Member=system:DateTime.Today}, StringFormat=Date: {0:dddd, MMMM dd yyyy}}"/>
+        <Label Grid.Row="1" Grid.Column="2" x:Name="lbl_Time" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" Content = "{Binding CurrentDateAndTime}" ContentStringFormat=" {0:T}" />
+        <Label Grid.Column="2" Grid.Row="0" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center"  Content="{Binding Source={x:Static Member=system:DateTime.Today}, StringFormat=Date: {0:dddd, MMMM dd yyyy}}"/>
         
 
-        <Button Grid.Column="0" Grid.Row="2"  Grid.ColumnSpan="2" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
+        <Button Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="2" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
             <Button.Background>
                 <ImageBrush ImageSource="/NoteAppCode1Edit.png"/>
             </Button.Background>
@@ -56,7 +57,7 @@
             </Button.Effect>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="Calculator_Application" Content="Calculator Application" Click="Calculator_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
+        <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" x:Name="Calculator_Application" Content="Calculator Application" Click="Calculator_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -65,7 +66,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" x:Name="Random_Number_Generator_Application" Content="Random Number Generator Application" Click="Random_Number_Generator_Application_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
+        <Button Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" x:Name="Random_Number_Generator_Application" Content="Random Number Generator Application" Click="Random_Number_Generator_Application_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -74,7 +75,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" x:Name="Employee_Promotion" Content="Employee Promotion" Click="Employee_Promotion_Click" FontFamily="AniMe Matrix - MB_EN" FontSize="20" Foreground="Red">
+        <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" x:Name="Employee_Promotion" Content="Employee Promotion" Click="Employee_Promotion_Click" FontFamily="AniMe Matrix - MB_EN" FontSize="20" Foreground="Red">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -83,7 +84,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" x:Name="Drawing_Board" Content="Drawing Board" Click="Drawing_Board_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
+        <Button Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" x:Name="Drawing_Board" Content="Drawing Board" Click="Drawing_Board_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
