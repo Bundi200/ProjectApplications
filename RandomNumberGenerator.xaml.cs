@@ -23,5 +23,12 @@ namespace Applications
         {
             InitializeComponent();
         }
+
+        private void Btn_MainMenu_OnClick(object sender, RoutedEventArgs e)
+        {
+            var newWindow = new Applications.MainWindow();
+            newWindow.Show();
+            this.Close();
+        }
     }
 }

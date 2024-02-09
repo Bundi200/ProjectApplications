@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="RandomNumberGenerator" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Height="30" x:Name="btn_MainMenu" Click="Btn_MainMenu_OnClick" Content="Main Menu"></Button>
     </Grid>
 </Window>
