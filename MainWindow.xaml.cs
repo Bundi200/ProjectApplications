@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -47,6 +48,26 @@ namespace Applications
             var newWindow = new RandomNumberGenerator();
             newWindow.Show();
             this.Close();
+        }
+        private void Employee_Promotion_Click(object sender, RoutedEventArgs e)
+        {
+            var newWindow = new EmployeePromotion();
+            newWindow.Show();
+            this.Close();
+        }
+        private void Drawing_Board_Click(object sender, RoutedEventArgs e)
+        {
+            var newWindow = new Drawing();
+            newWindow.Show();
+            this.Close();
+        }
+        private void lbl_Time(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void lbl_Date(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
