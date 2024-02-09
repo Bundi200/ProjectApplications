@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Applications"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="600" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="*"/>
@@ -35,8 +35,10 @@
             </Label.RenderTransform>
 
         </Label>
-        <Label Grid.Row="0" Grid.Column="1" Loaded="lbl_Time"></Label>
-        <Label Grid.Row="1" Grid.Column="1" Loaded="lbl_Date"></Label>
+        <Label Grid.Row="0" Grid.Column="1" Loaded="lbl_Date" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" >
+            
+        </Label>
+        
 
         <Button Grid.Column="0" Grid.Row="2"  Grid.ColumnSpan="2" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
             <Button.Background>

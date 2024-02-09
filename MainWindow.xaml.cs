@@ -27,6 +27,12 @@ namespace Applications
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //DateTime currentDate = DateTime.Today;
+
+            //Label label = new Label();
+            
         }
 
         private void Note_Application_Click(object sender, RoutedEventArgs e)
@@ -61,13 +67,12 @@ namespace Applications
             newWindow.Show();
             this.Close();
         }
-        private void lbl_Time(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
         private void lbl_Date(object sender, RoutedEventArgs e)
         {
+            DateTime currentDate = DateTime.UtcNow;
 
+            lbl_date.Content = currentDate;
         }
     }
 }
