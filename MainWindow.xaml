@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applications"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="600" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="900" Width="700" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
 
@@ -28,11 +28,15 @@
 
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" Content="Note Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Note Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
+        <Label Grid.Column="0" Grid.Row="0" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
             <Label.RenderTransform>
-                <ScaleTransform ScaleX="-1"/>
+                <ScaleTransform   ScaleX="-1"/>
+
+                
             </Label.RenderTransform>
+            
+            
 
         </Label>
         <Label Grid.Row="0" Grid.Column="1" Loaded="lbl_Date" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" >
