@@ -21,13 +21,13 @@
         
         <TabControl Grid.Column="0" Grid.Row="1" x:Name="tabcontrol" Background="Gray" Height="400">
             
-            <TabItem Header="Test1">
+            <TabItem Header="Test1" >
                 <InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board1"  />
             </TabItem>
             <TabItem Header="Test2">
                 <InkCanvas Grid.Column="0" Grid.Row="1" x:Name="Drawing_Board2"  />
             </TabItem>
-            <TabControl></TabControl>
+            
         </TabControl>
     </Grid>
 </Window>
