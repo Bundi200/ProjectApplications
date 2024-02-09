@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applications"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="700" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid">
@@ -39,9 +40,8 @@
             
 
         </Label>
-        <Label Grid.Row="0" Grid.Column="1" Loaded="lbl_Date" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" >
-            
-        </Label>
+        <Label Grid.Row="1" Grid.Column="1" x:Name="lbl_Time" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" Content = "{Binding CurrentDateAndTime}" ContentStringFormat=" {0:T}" />
+        <Label Grid.Column="1" Grid.Row="0" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center"  Content="{Binding Source={x:Static Member=system:DateTime.Today}, StringFormat=Date: {0:dddd, MMMM dd yyyy}}"/>
         
 
         <Button Grid.Column="0" Grid.Row="2"  Grid.ColumnSpan="2" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">

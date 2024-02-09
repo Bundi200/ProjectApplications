@@ -14,20 +14,33 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using Microsoft.VisualBasic;
+using System.ComponentModel;
+
 
 namespace Applications
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        
-        
+        public DateTime CurrentDateAndTime { get; set; }
+        public event PropertyChangedEventHandler? PropertyChanged;
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += new EventHandler(lbl_time);
+            timer.Start();
         }
+
+        
 
         private void Note_Application_Click(object sender, RoutedEventArgs e)
         {
@@ -62,11 +75,12 @@ namespace Applications
             this.Close();
         }
         
-        private void lbl_Date(object sender, RoutedEventArgs e)
+        public void lbl_time(object sender, EventArgs e)
         {
-            DateTime currentDate = DateTime.UtcNow;
+            CurrentDateAndTime = DateTime.Now;
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName: "CurrentDateAndTime"));
 
-            lbl_date.Content = currentDate;
         }
+        
     }
 }
