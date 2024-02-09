@@ -5,36 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applications"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
+        Title="MainWindow" Height="900" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            
-            
+
+
 
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
 
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            
-
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click">
-            
-        </Button>
-        
-        <Button Grid.Column="1" x:Name="Calculator_Application" Content="Calculator Application" Click="Calculator_Application_Click">
+        <Label Grid.Column="0" Grid.Row="0" Content="Note Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Note Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
+            <Label.RenderTransform>
+                <ScaleTransform ScaleX="-1"/>
+            </Label.RenderTransform>
 
+        </Label>
+        <Label Grid.Row="0" Grid.Column="1" Loaded="lbl_Time"></Label>
+        <Label Grid.Row="1" Grid.Column="1" Loaded="lbl_Date"></Label>
+
+        <Button Grid.Column="0" Grid.Row="2"  Grid.ColumnSpan="2" x:Name="Note_Application" Content="Note Application" Click="Note_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
+            <Button.Background>
+                <ImageBrush ImageSource="/NoteAppCode1Edit.png"/>
+            </Button.Background>
+            <Button.FocusVisualStyle>
+                <Style/>
+            </Button.FocusVisualStyle>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="1" x:Name="Random_Number_Generator_Application" Content="Random Number Generator Application" Click="Random_Number_Generator_Application_Click">
-            
+        <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="Calculator_Application" Content="Calculator Application" Click="Calculator_Application_Click" Foreground="Red" FontSize="20" FontFamily="AniMe Matrix - MB_EN">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="/NoteAppCode2Edit.png"/>
+            </Button.Background>
         </Button>
+
+        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" x:Name="Random_Number_Generator_Application" Content="Random Number Generator Application" Click="Random_Number_Generator_Application_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="/NoteAppCode3Edit.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" x:Name="Employee_Promotion" Content="Employee Promotion" Click="Employee_Promotion_Click" FontFamily="AniMe Matrix - MB_EN" FontSize="20" Foreground="Red">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="/NoteAppCode4Edit.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" x:Name="Drawing_Board" Content="Drawing Board" Click="Drawing_Board_Click" Foreground="Red" FontFamily="AniMe Matrix - MB_EN" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="/NoteAppCode5Edit.png"/>
+            </Button.Background>
+        </Button>
+
+
     </Grid>
 </Window>
