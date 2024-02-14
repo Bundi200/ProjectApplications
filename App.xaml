@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Applications"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="test">/Applications:/Fonts/AniMeMatrix-MB_EN.ttf#AnimeFont</FontFamily>
+        <FontFamily x:Key="LabelFontFamily1">/Applications:/Fonts/AniMeMatrix-MB_EN.ttf#AnimeFont</FontFamily>
     </Application.Resources>
 </Application>

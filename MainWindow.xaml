@@ -6,11 +6,17 @@
         xmlns:local="clr-namespace:Applications"
         xmlns:system="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="800" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="900" Width="900" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <FontFamily x:Key="CustomAnimeFont">/Application:/Fonts/AniMeMatrix-MB_EN.ttf#AnimeFont</FontFamily>
+        
+    </Window.Resources>
+    
+    
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
 
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="130"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
 
@@ -30,8 +36,8 @@
 
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="0" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
-        <Label Grid.Column="1" Grid.Row="1" Content="Project Application" FontFamily="AniMe Matrix - MB_EN" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left">
+        <Label Grid.Column="1" Grid.Row="0" Content="Project Application" FontSize="22" FontFamily="{DynamicResource LabelFontFamily1}"/>
+        <Label Grid.Column="1" Grid.Row="1" Content="Project Application" FontSize="22" RenderTransformOrigin="0.5,0.5" Opacity="0.5" x:Name="ShadowTitle" HorizontalAlignment="Left" FontFamily="{DynamicResource test}">
             <Label.RenderTransform>
                 <ScaleTransform   ScaleX="-1"/>
 
@@ -41,7 +47,10 @@
             
 
         </Label>
-        <Label Grid.Row="1" Grid.Column="2" x:Name="lbl_Time" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" Content = "{Binding CurrentDateAndTime}" ContentStringFormat=" {0:T}" />
+        <Label Grid.Row="1" Grid.Column="2" x:Name="lbl_Time" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center" Content = "{Binding CurrentDateAndTime}" ContentStringFormat=" {0:T}" >
+            
+        
+        </Label>
         <Label Grid.Column="2" Grid.Row="0" x:Name="lbl_date" FontFamily="AniMe Matrix - MB_EN" FontSize="20" HorizontalContentAlignment="Center"  Content="{Binding Source={x:Static Member=system:DateTime.Today}, StringFormat=Date: {0:dddd, MMMM dd yyyy}}"/>
         
 

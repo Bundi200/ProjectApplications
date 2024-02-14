@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Remove="197873.jpg" />
     <None Remove="backiee-189646.jpg" />
+    <None Remove="Fonts\AniMeMatrix-MB_EN.ttf" />
     <None Remove="NoteAppCode1Edit.png" />
     <None Remove="NoteAppCode2Edit.png" />
     <None Remove="NoteAppCode3Edit.png" />
@@ -37,6 +38,9 @@
   <ItemGroup>
     <Resource Include="197873.jpg" />
     <Resource Include="backiee-189646.jpg" />
+    <Resource Include="Fonts\AniMeMatrix-MB_EN.ttf">
+    
+	</Resource>
     <Resource Include="NoteAppCode1Edit.png" />
     <Resource Include="NoteAppCode2Edit.png" />
     <Resource Include="NoteAppCode3Edit.png" />
